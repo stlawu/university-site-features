@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.timeline_slide
+  module:
+    - datetime
+id: node.timeline_slide.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: timeline_slide
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

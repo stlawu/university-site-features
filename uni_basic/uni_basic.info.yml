@@ -1,0 +1,10 @@
+name: 'Basic block'
+description: 'Provides Basic block custom block type and related configuration. A basic block contains a title and a body.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - text
+package: 'University Site'
+version: 8.x-2.1

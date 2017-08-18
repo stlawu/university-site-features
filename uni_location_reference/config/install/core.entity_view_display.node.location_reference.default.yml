@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location_reference.body
+    - field.field.node.location_reference.field_geolocation
+    - node.type.location_reference
+  module:
+    - geolocation
+    - text
+    - user
+id: node.location_reference.default
+targetEntityType: node
+bundle: location_reference
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_geolocation:
+    weight: 102
+    label: visually_hidden
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        type: ROADMAP
+        zoom: '10'
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        height: 500px
+        width: 100%
+        info_auto_display: 1
+        disableAutoPan: 1
+        scrollwheel: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+    third_party_settings: {  }
+    type: geolocation_map
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

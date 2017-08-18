@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.document.field_document_file
+    - field.field.media.document.field_file_size
+    - image.style.thumbnail
+    - media_entity.bundle.document
+  module:
+    - image
+id: media.document.preview
+targetEntityType: media
+bundle: document
+mode: preview
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_document_file: true
+  field_file_size: true
+  name: true
+  uid: true

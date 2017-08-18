@@ -1,0 +1,8 @@
+bundle: paragraph_types
+required:
+  - core.entity_form_display.paragraph.content_reference.default
+  - core.entity_view_display.paragraph.content_reference.default
+  - core.entity_view_display.paragraph.content_reference.preview
+  - field.field.paragraph.content_reference.field_content_reference
+  - field.storage.paragraph.field_content_reference
+  - paragraphs.paragraphs_type.content_reference

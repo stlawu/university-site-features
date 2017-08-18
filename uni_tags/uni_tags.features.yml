@@ -1,0 +1,5 @@
+bundle: uni
+required:
+  - field.field.node.article.field_tags
+  - field.storage.node.field_tags
+  - taxonomy.vocabulary.tags

@@ -1,0 +1,18 @@
+name: 'Academic Program'
+description: 'Provides Academic Program content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - term_reference_tree
+  - text
+  - uni_academic_program_level
+  - uni_academic_subject
+  - user
+  - views
+package: 'University Site'
+version: 8.x-2.1

@@ -1,0 +1,10 @@
+name: Container
+description: 'Provides Container paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - options
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

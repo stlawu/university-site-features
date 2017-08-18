@@ -1,0 +1,12 @@
+name: Soundcloud
+description: 'Provides Soundcloud media bundle and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - link
+  - media_bundles_core
+  - media_entity
+  - media_entity_soundcloud
+package: 'Media Bundles'
+version: 8.x-2.1

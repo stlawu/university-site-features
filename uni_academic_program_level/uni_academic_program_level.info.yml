@@ -1,0 +1,13 @@
+name: 'Academic Program Level'
+description: 'Provides Academic Program Level taxonomy vocabulary and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - node
+  - search_api
+  - taxonomy
+  - uni_academic_program
+  - views
+package: 'University Site'
+version: 8.x-2.1

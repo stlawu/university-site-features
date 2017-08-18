@@ -1,0 +1,4 @@
+bundle: media_bundles
+excluded:
+  - asset_injector.css_injector.media_browser_view_css
+required: true

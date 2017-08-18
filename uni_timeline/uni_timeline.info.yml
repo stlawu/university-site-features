@@ -1,0 +1,34 @@
+name: Timeline
+description: 'Provides Timeline content type and related configuration. Use to create dynamic timelines'
+type: module
+core: 8.x
+dependencies:
+  - asset_injector
+  - better_formats
+  - block
+  - color_field
+  - datetime
+  - entity_browser
+  - entity_browser_entity_form
+  - eva
+  - field
+  - field_group
+  - image
+  - inline_entity_form
+  - media_bundles_core
+  - media_bundles_image
+  - media_bundles_video_external
+  - media_entity
+  - menu_ui
+  - node
+  - options
+  - path
+  - text
+  - uni_category
+  - uni_core
+  - uni_location_reference
+  - user
+  - views
+  - views_timelinejs
+package: 'University Site'
+version: 8.x-2.1

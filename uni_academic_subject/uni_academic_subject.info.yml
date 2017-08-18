@@ -1,0 +1,11 @@
+name: 'Academic Subject'
+description: 'Provides Academic Subject taxonomy vocabulary and related configuration. The academic subject area. (Example: Chemistry, Biology, Physics, ...)'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - node
+  - taxonomy
+  - uni_academic_program
+package: 'University Site'
+version: 8.x-2.1

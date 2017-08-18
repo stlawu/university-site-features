@@ -1,0 +1,12 @@
+name: Card
+description: 'Provides Card paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - ds
+  - entity_reference_revisions
+  - field
+  - options
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

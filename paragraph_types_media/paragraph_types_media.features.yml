@@ -1,0 +1,9 @@
+bundle: paragraph_types
+required:
+  - core.entity_view_display.paragraph.media.default
+  - core.entity_view_display.paragraph.media.preview
+  - field.field.paragraph.media.field_caption
+  - field.field.paragraph.media.field_citation
+  - field.field.paragraph.media.field_media
+  - paragraphs.paragraphs_type.media
+  - core.entity_form_display.paragraph.media.default

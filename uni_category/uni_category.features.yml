@@ -1,0 +1,4 @@
+bundle: uni
+required:
+  - field.storage.node.field_category
+  - taxonomy.vocabulary.category

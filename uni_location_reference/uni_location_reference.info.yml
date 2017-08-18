@@ -1,0 +1,18 @@
+name: Location
+description: 'Provides Location content type and related configuration. Use to identify geographic locations.'
+type: module
+core: 8.x
+dependencies:
+  - entity_browser
+  - entity_browser_entity_form
+  - field
+  - geolocation
+  - menu_ui
+  - node
+  - path
+  - text
+  - uni_core
+  - user
+  - views
+package: 'University Site'
+version: 8.x-2.1

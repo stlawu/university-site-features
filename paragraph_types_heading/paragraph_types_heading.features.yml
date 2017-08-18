@@ -1,0 +1,7 @@
+bundle: paragraph_types
+required:
+  - core.entity_form_display.paragraph.heading.default
+  - core.entity_view_display.paragraph.heading.default
+  - field.field.paragraph.heading.field_heading
+  - field.storage.paragraph.field_heading
+  - paragraphs.paragraphs_type.heading

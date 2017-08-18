@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.block_reference
+    - paragraphs.paragraphs_type.breakout
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.content_reference
+    - paragraphs.paragraphs_type.heading
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.container.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: container
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      block_reference: block_reference
+      breakout: breakout
+      container: container
+      content_reference: content_reference
+      heading: heading
+      media: media
+      text: text
+    target_bundles_drag_drop:
+      block_reference:
+        enabled: true
+        weight: 8
+      breakout:
+        enabled: true
+        weight: 9
+      container:
+        enabled: true
+        weight: 10
+      content_reference:
+        enabled: true
+        weight: 11
+      heading:
+        enabled: true
+        weight: 12
+      media:
+        enabled: true
+        weight: 13
+      text:
+        enabled: true
+        weight: 14
+field_type: entity_reference_revisions

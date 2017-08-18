@@ -1,0 +1,9 @@
+name: Heading
+description: 'Provides Heading paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

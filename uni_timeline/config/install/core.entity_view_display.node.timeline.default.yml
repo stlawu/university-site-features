@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline.body
+    - field.field.node.timeline.field_add_slide
+    - field.field.node.timeline.field_byline
+    - node.type.timeline
+  module:
+    - text
+    - user
+id: node.timeline.default
+targetEntityType: node
+bundle: timeline
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_byline:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  timeline_maker_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_add_slide: true

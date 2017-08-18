@@ -1,0 +1,25 @@
+bundle: uni
+required:
+  - field.storage.node.field_add_slide
+  - field.storage.node.field_banner_color
+  - field.storage.node.field_banner_image
+  - field.storage.node.field_byline
+  - field.storage.node.field_display_date
+  - field.storage.node.field_end_date
+  - field.storage.node.field_geolocation
+  - field.storage.node.field_image
+  - field.storage.node.field_media
+  - field.storage.node.field_media_caption
+  - field.storage.node.field_media_citation
+  - field.storage.node.field_paragraph_elements
+  - field.storage.node.field_start_date
+  - field.storage.node.field_subtitle
+  - field.storage.node.field_type_of_slide
+  - entity_browser.browser.media_selector
+  - views.view.academics
+  - views.view.academics_listing
+  - views.view.content_browser
+  - views.view.location_browser
+  - views.view.map
+  - views.view.media_selector
+  - views.view.paragraph_browser

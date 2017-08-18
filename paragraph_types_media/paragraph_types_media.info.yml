@@ -1,0 +1,15 @@
+name: Media
+description: 'Provides Media paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - better_formats
+  - entity_browser
+  - field
+  - field_group
+  - media_bundles_core
+  - media_entity
+  - paragraphs
+  - text
+package: 'Paragraph Types'
+version: 8.x-2.1

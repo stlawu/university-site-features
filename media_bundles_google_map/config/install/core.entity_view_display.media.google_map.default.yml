@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.google_map.field_google_map
+    - media_entity.bundle.google_map
+  module:
+    - simple_gmap
+id: media.google_map.default
+targetEntityType: media
+bundle: google_map
+mode: default
+content:
+  field_google_map:
+    weight: 0
+    label: hidden
+    settings:
+      include_map: '1'
+      apikey: ''
+      iframe_width: 100%
+      iframe_height: 400px
+      static_scale: '1'
+      link_text: 'View larger map'
+      zoom_level: '14'
+      map_type: m
+      langcode: en
+      include_static_map: 0
+      include_link: 0
+      include_text: 0
+    third_party_settings: {  }
+    type: simple_gmap
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

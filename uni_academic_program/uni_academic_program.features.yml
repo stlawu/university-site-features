@@ -1,0 +1,7 @@
+bundle: uni
+required:
+  - core.entity_form_display.node.academic_program.default
+  - core.entity_view_display.node.academic_program.default
+  - core.entity_view_display.node.academic_program.teaser
+  - field.field.node.academic_program.body
+  - node.type.academic_program

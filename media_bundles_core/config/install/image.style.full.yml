@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+name: full
+label: Full
+effects:
+  a090add6-4378-4f29-bcdd-8b5d206bf90b:
+    uuid: a090add6-4378-4f29-bcdd-8b5d206bf90b
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false
+  fe185d3e-3051-4593-bcc3-5aa28067dfc1:
+    uuid: fe185d3e-3051-4593-bcc3-5aa28067dfc1
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 1280
+      upscale: false

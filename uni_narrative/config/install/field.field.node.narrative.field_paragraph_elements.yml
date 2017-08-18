@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_elements
+    - node.type.narrative
+  module:
+    - entity_reference_revisions
+id: node.narrative.field_paragraph_elements
+field_name: field_paragraph_elements
+entity_type: node
+bundle: narrative
+label: Elements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      heading:
+        weight: 4
+        enabled: false
+      media:
+        weight: 5
+        enabled: false
+      text:
+        weight: 6
+        enabled: false
+      breakout:
+        weight: 8
+        enabled: false
+      block_reference:
+        weight: 8
+        enabled: false
+      container:
+        weight: 10
+        enabled: false
+      content_reference:
+        weight: 11
+        enabled: false
+      card:
+        weight: 12
+        enabled: false
+      double:
+        weight: 13
+        enabled: false
+field_type: entity_reference_revisions

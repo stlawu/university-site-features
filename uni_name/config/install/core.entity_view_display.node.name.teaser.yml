@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.name.body
+    - field.field.node.name.field_birth_year_integer
+    - field.field.node.name.field_birth_year_text
+    - field.field.node.name.field_first_name
+    - field.field.node.name.field_last_name
+    - field.field.node.name.field_name_on_records
+    - field.field.node.name.field_yupik_name
+    - field.field.node.name.field_yupik_name_meaning
+    - node.type.name
+  module:
+    - text
+    - user
+id: node.name.teaser
+targetEntityType: node
+bundle: name
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_birth_year_integer: true
+  field_birth_year_text: true
+  field_first_name: true
+  field_last_name: true
+  field_name_on_records: true
+  field_yupik_name: true
+  field_yupik_name_meaning: true

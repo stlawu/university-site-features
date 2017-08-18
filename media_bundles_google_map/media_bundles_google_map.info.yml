@@ -1,0 +1,11 @@
+name: 'Google Map'
+description: 'Provides Google Map media bundle and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - media_bundles_core
+  - media_entity
+  - simple_gmap
+package: 'Media Bundles'
+version: 8.x-2.1

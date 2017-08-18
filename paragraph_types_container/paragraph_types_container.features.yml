@@ -1,0 +1,5 @@
+bundle: paragraph_types
+required:
+  - field.field.paragraph.container.field_container_type
+  - paragraphs.paragraphs_type.container
+  - field.storage.paragraph.field_container_type

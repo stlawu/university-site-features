@@ -1,0 +1,5 @@
+bundle: uni
+required:
+  - field.field.node.academic_program.field_academic_subject
+  - field.storage.node.field_academic_subject
+  - taxonomy.vocabulary.academic_subject

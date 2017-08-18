@@ -1,0 +1,16 @@
+bundle: media_bundles
+required:
+  - core.entity_form_display.media.video_external.default
+  - core.entity_view_display.media.video_external.default
+  - core.entity_view_display.media.video_external.preview
+  - field.field.media.video_external.field_video_embed
+  - field.field.media.video_external.field_video_id
+  - field.field.media.video_external.field_video_image
+  - field.field.media.video_external.field_video_image_data
+  - field.field.media.video_external.field_video_source_human_name
+  - field.field.media.video_external.field_video_source_machine_name
+  - field.storage.media.field_video_embed
+  - field.storage.media.field_video_id
+  - field.storage.media.field_video_source_human_name
+  - field.storage.media.field_video_source_machine_name
+  - media_entity.bundle.video_external

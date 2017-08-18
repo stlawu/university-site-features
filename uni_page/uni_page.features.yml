@@ -1,0 +1,10 @@
+bundle: uni
+required:
+  - core.base_field_override.node.page.promote
+  - core.entity_form_display.group_content.department-group_node-page.default
+  - core.entity_form_display.node.page.default
+  - core.entity_view_display.node.page.default
+  - core.entity_view_display.node.page.teaser
+  - field.field.node.page.body
+  - group.content_type.department-group_node-page
+  - node.type.page

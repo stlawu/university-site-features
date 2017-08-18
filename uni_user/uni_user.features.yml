@@ -1,0 +1,7 @@
+bundle: uni
+required:
+  - core.entity_form_display.user.user.default
+  - core.entity_view_display.user.user.compact
+  - core.entity_view_display.user.user.default
+  - field.field.user.user.user_picture
+  - field.storage.user.user_picture

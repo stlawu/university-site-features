@@ -1,0 +1,11 @@
+name: Tags
+description: 'Provides Tags taxonomy vocabulary and related configuration. Use tags to group articles on similar topics into categories.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - node
+  - taxonomy
+  - uni_article
+package: 'University Site'
+version: 8.x-2.1

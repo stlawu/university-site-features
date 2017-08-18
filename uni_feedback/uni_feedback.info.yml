@@ -1,0 +1,8 @@
+name: 'Website feedback'
+description: 'Provides Website feedback contact form and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - contact
+package: 'University Site'
+version: 8.x-2.1

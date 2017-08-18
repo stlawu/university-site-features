@@ -1,0 +1,26 @@
+name: Narrative
+description: 'Provides Narrative content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - better_formats
+  - color_field
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - field_group
+  - image
+  - menu_ui
+  - node
+  - paragraph_types_breakout
+  - paragraph_types_content_reference
+  - paragraph_types_heading
+  - paragraph_types_media
+  - paragraph_types_text
+  - paragraphs
+  - path
+  - text
+  - uni_core
+  - user
+package: 'University Site'
+version: 8.x-2.1

@@ -1,0 +1,14 @@
+name: Breakout
+description: 'Provides Breakout paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - color_field
+  - ds
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

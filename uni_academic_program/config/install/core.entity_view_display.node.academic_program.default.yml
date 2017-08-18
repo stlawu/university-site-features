@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.academic_program.body
+    - field.field.node.academic_program.field_academic_program_level
+    - field.field.node.academic_program.field_academic_subject
+    - node.type.academic_program
+  module:
+    - text
+    - user
+id: node.academic_program.default
+targetEntityType: node
+bundle: academic_program
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_academic_program_level:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_academic_subject:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 100
+hidden: {  }

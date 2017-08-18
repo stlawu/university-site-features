@@ -1,0 +1,8 @@
+bundle: uni
+required:
+  - comment.type.comment
+  - core.entity_form_display.comment.comment.default
+  - core.entity_view_display.comment.comment.default
+  - field.field.comment.comment.comment_body
+  - field.field.node.article.comment
+  - field.storage.node.comment

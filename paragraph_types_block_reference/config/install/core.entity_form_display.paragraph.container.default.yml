@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.field_container_type
+    - field.field.paragraph.container.field_content
+    - paragraphs.paragraphs_type.container
+  module:
+    - paragraphs
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  field_container_type:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_content:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Content
+      title_plural: Content
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

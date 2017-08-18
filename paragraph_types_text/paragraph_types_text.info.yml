@@ -1,0 +1,11 @@
+name: Text
+description: 'Provides Text paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - better_formats
+  - field
+  - paragraphs
+  - text
+package: 'Paragraph Types'
+version: 8.x-2.1

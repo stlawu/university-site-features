@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_caption
+    - node.type.timeline_slide
+id: node.timeline_slide.field_media_caption
+field_name: field_media_caption
+entity_type: node
+bundle: timeline_slide
+label: 'Media Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

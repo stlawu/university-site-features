@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.narrative.field_banner_color
+    - field.field.node.narrative.field_banner_image
+    - field.field.node.narrative.field_byline
+    - field.field.node.narrative.field_paragraph_elements
+    - field.field.node.narrative.field_subtitle
+    - node.type.narrative
+  module:
+    - user
+id: node.narrative.teaser
+targetEntityType: node
+bundle: narrative
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_banner_color: true
+  field_banner_image: true
+  field_byline: true
+  field_paragraph_elements: true
+  field_subtitle: true

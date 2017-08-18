@@ -1,0 +1,10 @@
+name: Category
+description: 'Provides Category taxonomy vocabulary and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - node
+  - taxonomy
+package: 'University Site'
+version: 8.x-2.1

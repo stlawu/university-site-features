@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.twitter.field_twitter_embed_code
+    - media_entity.bundle.twitter
+id: media.twitter.default
+targetEntityType: media
+bundle: twitter
+mode: default
+content:
+  field_twitter_embed_code:
+    weight: 1
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

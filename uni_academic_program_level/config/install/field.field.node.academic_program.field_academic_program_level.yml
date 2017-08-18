@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_academic_program_level
+    - node.type.academic_program
+    - taxonomy.vocabulary.academic_program_level
+id: node.academic_program.field_academic_program_level
+field_name: field_academic_program_level
+entity_type: node
+bundle: academic_program
+label: 'Academic Program Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_program_level: academic_program_level
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

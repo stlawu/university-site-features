@@ -1,0 +1,211 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.node.timeline_slide.body
+    - field.field.node.timeline_slide.field_category
+    - field.field.node.timeline_slide.field_display_date
+    - field.field.node.timeline_slide.field_end_date
+    - field.field.node.timeline_slide.field_geolocation_referenced
+    - field.field.node.timeline_slide.field_media
+    - field.field.node.timeline_slide.field_media_caption
+    - field.field.node.timeline_slide.field_media_caption_formatted
+    - field.field.node.timeline_slide.field_media_citation
+    - field.field.node.timeline_slide.field_media_citation_formatted
+    - field.field.node.timeline_slide.field_start_date
+    - field.field.node.timeline_slide.field_timeline_item_bg_color
+    - field.field.node.timeline_slide.field_timeline_slide_bg_image
+    - field.field.node.timeline_slide.field_type_of_slide
+    - node.type.timeline_slide
+  module:
+    - color_field
+    - datetime
+    - entity_browser
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_media:
+      children:
+        - field_media
+        - field_media_caption
+        - field_media_caption_formatted
+        - field_media_citation
+        - field_media_citation_formatted
+      parent_name: ''
+      weight: 14
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Media
+    group_date_info:
+      children:
+        - field_start_date
+        - field_end_date
+        - field_display_date
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: date-info-group
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Date Info'
+id: node.timeline_slide.default
+targetEntityType: node
+bundle: timeline_slide
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_category:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_display_date:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_end_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_geolocation_referenced:
+    weight: 13
+    settings:
+      entity_browser: location_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+  field_media:
+    weight: 14
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+  field_media_caption:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_media_caption_formatted:
+    weight: 16
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_media_citation:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_media_citation_formatted:
+    weight: 18
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_start_date:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_timeline_item_bg_color:
+    weight: 26
+    settings:
+      default_colors: "#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+    type: color_field_widget_box
+  field_timeline_slide_bg_image:
+    weight: 15
+    settings:
+      entity_browser: media_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+  field_type_of_slide:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

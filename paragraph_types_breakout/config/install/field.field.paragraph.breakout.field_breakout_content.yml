@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_breakout_content
+    - paragraphs.paragraphs_type.breakout
+  module:
+    - entity_reference_revisions
+id: paragraph.breakout.field_breakout_content
+field_name: field_breakout_content
+entity_type: paragraph
+bundle: breakout
+label: 'Breakout Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      breakout:
+        weight: 7
+        enabled: false
+      block_reference:
+        weight: 10
+        enabled: false
+      card:
+        weight: 10
+        enabled: false
+      heading:
+        weight: 12
+        enabled: false
+      container:
+        weight: 13
+        enabled: false
+      media:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      content_reference:
+        weight: 14
+        enabled: false
+      double:
+        weight: 15
+        enabled: false
+field_type: entity_reference_revisions

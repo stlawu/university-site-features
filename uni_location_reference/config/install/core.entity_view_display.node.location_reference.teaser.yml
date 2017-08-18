@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location_reference.body
+    - field.field.node.location_reference.field_geolocation
+    - node.type.location_reference
+  module:
+    - text
+    - user
+id: node.location_reference.teaser
+targetEntityType: node
+bundle: location_reference
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_geolocation: true

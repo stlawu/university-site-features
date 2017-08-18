@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.academic_program.body
+    - field.field.node.academic_program.field_academic_program_level
+    - field.field.node.academic_program.field_academic_subject
+    - node.type.academic_program
+  module:
+    - text
+    - user
+id: node.academic_program.teaser
+targetEntityType: node
+bundle: academic_program
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_academic_program_level: true
+  field_academic_subject: true

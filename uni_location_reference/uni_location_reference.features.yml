@@ -1,0 +1,10 @@
+bundle: uni
+required:
+  - core.base_field_override.node.location_reference.promote
+  - core.entity_form_display.node.location_reference.default
+  - core.entity_view_display.node.location_reference.default
+  - core.entity_view_display.node.location_reference.teaser
+  - field.field.node.location_reference.body
+  - field.field.node.location_reference.field_geolocation
+  - node.type.location_reference
+  - entity_browser.browser.location_browser

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.double.field_double_content_primary
+    - field.field.paragraph.double.field_double_content_secondary
+    - paragraphs.paragraphs_type.double
+  module:
+    - entity_reference_revisions
+id: paragraph.double.default
+targetEntityType: paragraph
+bundle: double
+mode: default
+content:
+  field_double_content_primary:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_double_content_secondary:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden: {  }

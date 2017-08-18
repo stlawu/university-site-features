@@ -1,0 +1,17 @@
+name: Image
+description: 'Provides Image media bundle and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - colorbox
+  - embed
+  - entity_embed
+  - field
+  - file
+  - image
+  - media_bundles_core
+  - media_bundles_video_external
+  - media_entity
+  - media_entity_image
+package: 'Media Bundles'
+version: 8.x-2.1

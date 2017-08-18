@@ -1,0 +1,7 @@
+bundle: media_bundles
+required:
+  - core.entity_form_display.media.twitter.default
+  - core.entity_view_display.media.twitter.default
+  - field.field.media.twitter.field_twitter_embed_code
+  - field.storage.media.field_twitter_embed_code
+  - media_entity.bundle.twitter

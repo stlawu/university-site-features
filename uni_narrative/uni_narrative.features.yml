@@ -1,0 +1,14 @@
+bundle: uni
+required:
+  - core.entity_form_display.group_content.department-group_node-narrative.default
+  - core.entity_form_display.node.narrative.default
+  - core.entity_view_display.group_content.department-group_node-narrative.default
+  - core.entity_view_display.node.narrative.default
+  - core.entity_view_display.node.narrative.teaser
+  - field.field.node.narrative.field_banner_color
+  - field.field.node.narrative.field_banner_image
+  - field.field.node.narrative.field_byline
+  - field.field.node.narrative.field_paragraph_elements
+  - field.field.node.narrative.field_subtitle
+  - group.content_type.department-group_node-narrative
+  - node.type.narrative

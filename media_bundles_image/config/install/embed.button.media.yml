@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - media_entity.bundle.video_external
+  module:
+    - entity_embed
+    - media_entity
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+    - video_external
+  display_plugins: {  }
+  entity_browser: media_selector
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

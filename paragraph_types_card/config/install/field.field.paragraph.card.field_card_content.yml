@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_content
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: paragraph.card.field_card_content
+field_name: field_card_content
+entity_type: paragraph
+bundle: card
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      block_reference:
+        weight: 10
+        enabled: false
+      breakout:
+        weight: 11
+        enabled: false
+      card:
+        weight: 12
+        enabled: false
+      container:
+        weight: 13
+        enabled: false
+      content_reference:
+        weight: 14
+        enabled: false
+      double:
+        weight: 15
+        enabled: false
+      heading:
+        weight: 16
+        enabled: false
+      media:
+        weight: 17
+        enabled: false
+      text:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

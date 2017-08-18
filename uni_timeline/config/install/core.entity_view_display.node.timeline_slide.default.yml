@@ -1,0 +1,212 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline_slide.body
+    - field.field.node.timeline_slide.field_category
+    - field.field.node.timeline_slide.field_display_date
+    - field.field.node.timeline_slide.field_end_date
+    - field.field.node.timeline_slide.field_geolocation_referenced
+    - field.field.node.timeline_slide.field_media
+    - field.field.node.timeline_slide.field_media_caption
+    - field.field.node.timeline_slide.field_media_caption_formatted
+    - field.field.node.timeline_slide.field_media_citation
+    - field.field.node.timeline_slide.field_media_citation_formatted
+    - field.field.node.timeline_slide.field_start_date
+    - field.field.node.timeline_slide.field_timeline_item_bg_color
+    - field.field.node.timeline_slide.field_timeline_slide_bg_image
+    - field.field.node.timeline_slide.field_type_of_slide
+    - node.type.timeline_slide
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - group_left_lower
+        - group_right_lower
+        - links
+        - field_category
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+    group_banner:
+      children:
+        - group_banner_inner
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: banner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Banner
+    group_banner_inner:
+      children:
+        - field_timeline_slide_bg_image
+        - field_media
+      parent_name: group_banner
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: banner-inner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: banner-inner
+    group_top:
+      children: {  }
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Top
+    group_left_lower:
+      children:
+        - field_display_date
+        - body
+      parent_name: group_container
+      weight: 26
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Left Lower'
+    group_right_lower:
+      children:
+        - field_media_caption
+        - field_media_caption_formatted
+        - field_media_citation
+        - field_media_citation_formatted
+      parent_name: group_container
+      weight: 27
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Right Lower'
+id: node.timeline_slide.default
+targetEntityType: node
+bundle: timeline_slide
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+  field_category:
+    weight: 32
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_display_date:
+    weight: 33
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_geolocation_referenced:
+    type: entity_reference_entity_view
+    weight: 3
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_media_caption:
+    weight: 29
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_media_caption_formatted:
+    weight: 30
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_media_citation:
+    weight: 31
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_media_citation_formatted:
+    weight: 32
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_timeline_slide_bg_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  links:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_end_date: true
+  field_start_date: true
+  field_timeline_item_bg_color: true
+  field_type_of_slide: true

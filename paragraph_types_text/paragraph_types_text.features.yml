@@ -1,0 +1,8 @@
+bundle: paragraph_types
+required:
+  - core.entity_view_display.paragraph.text.preview
+  - core.entity_view_display.paragraph.text.default
+  - field.field.paragraph.text.field_text
+  - field.storage.paragraph.field_text
+  - core.entity_form_display.paragraph.text.default
+  - paragraphs.paragraphs_type.text

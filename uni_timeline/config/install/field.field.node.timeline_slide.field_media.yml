@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media_entity.bundle.image
+    - media_entity.bundle.video_external
+    - node.type.timeline_slide
+id: node.timeline_slide.field_media
+field_name: field_media
+entity_type: node
+bundle: timeline_slide
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video_external: video_external
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

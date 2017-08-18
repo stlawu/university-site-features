@@ -1,0 +1,17 @@
+name: 'Block Reference'
+description: 'Provides Block Reference paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - entity_reference_revisions
+  - field
+  - paragraph_types_breakout
+  - paragraph_types_container
+  - paragraph_types_content_reference
+  - paragraph_types_heading
+  - paragraph_types_media
+  - paragraph_types_text
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

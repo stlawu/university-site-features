@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_slide
+    - node.type.timeline_slide
+  module:
+    - options
+id: node.timeline_slide.field_type_of_slide
+field_name: field_type_of_slide
+entity_type: node
+bundle: timeline_slide
+label: 'Type of Slide'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yupik_name
+    - node.type.name
+id: node.name.field_yupik_name
+field_name: field_yupik_name
+entity_type: node
+bundle: name
+label: 'Yupik Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

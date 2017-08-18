@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Subject'
+vid: academic_subject
+description: 'The academic subject area. (Example: Chemistry, Biology, Physics, ...)'
+hierarchy: 0
+weight: 0

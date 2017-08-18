@@ -1,0 +1,11 @@
+name: Double
+description: 'Provides Double paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - ds
+  - entity_reference_revisions
+  - field
+  - paragraphs
+package: 'Paragraph Types'
+version: 8.x-2.1

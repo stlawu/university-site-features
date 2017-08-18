@@ -1,0 +1,13 @@
+name: 'Content Reference'
+description: 'Provides Content Reference paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - entity_browser
+  - field
+  - node
+  - paragraphs
+  - uni_core
+  - views
+package: 'Paragraph Types'
+version: 8.x-2.1

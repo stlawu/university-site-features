@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.breakout.field_background_color
+    - field.field.paragraph.breakout.field_background_image
+    - field.field.paragraph.breakout.field_breakout_content
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.breakout
+  module:
+    - color_field
+    - image
+    - paragraphs
+id: paragraph.breakout.default
+targetEntityType: paragraph
+bundle: breakout
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+  field_background_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_breakout_content:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: block_reference
+label: 'Block Reference'
+behavior_plugins: {  }

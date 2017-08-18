@@ -1,0 +1,14 @@
+name: 'Video - External'
+description: 'Provides Video - External media bundle and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - media_bundles_core
+  - media_entity
+  - paragraph_types_media
+  - video_embed_field
+  - video_embed_media
+package: 'Media Bundles'
+version: 8.x-2.1

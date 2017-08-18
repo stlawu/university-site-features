@@ -1,0 +1,10 @@
+name: Twitter
+description: 'Provides Twitter media bundle and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - media_entity
+  - media_entity_twitter
+package: 'Media Bundles'
+version: 8.x-2.1

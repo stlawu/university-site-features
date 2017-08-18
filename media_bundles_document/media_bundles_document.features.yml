@@ -1,0 +1,10 @@
+bundle: media_bundles
+required:
+  - core.entity_form_display.media.document.default
+  - core.entity_view_display.media.document.default
+  - core.entity_view_display.media.document.preview
+  - field.field.media.document.field_document_file
+  - field.field.media.document.field_file_size
+  - field.storage.media.field_document_file
+  - field.storage.media.field_file_size
+  - media_entity.bundle.document

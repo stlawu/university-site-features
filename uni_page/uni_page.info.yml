@@ -1,0 +1,16 @@
+name: 'Basic page'
+description: 'Provides Basic page content type and related configuration. Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+type: module
+core: 8.x
+dependencies:
+  - entity_browser
+  - field
+  - gnode
+  - group
+  - node
+  - paragraph_types_content_reference
+  - path
+  - text
+  - user
+package: 'University Site'
+version: 8.x-2.1
