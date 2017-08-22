@@ -1,0 +1,169 @@
+/**
+ * Place your custom styles here.
+ */
+.region-header {
+  .banner-type-color{
+    padding: 5em 0;
+  }
+  .banner-type-image {
+    min-height: 80vh;
+    min-height: calc(100vh - 80px);
+    & > .container {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+    }
+  }
+}
+
+
+.region-header .banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+.region-header .banner .subtitle {
+  font-size: 1.5em;
+}
+.region-header .banner .byline {
+  font-style: italic;
+  opacity: .75;
+}
+
+.paragraph--type--heading {
+    max-width: 45em;
+    margin: auto;
+}
+.paragraph--type--text {
+    max-width: 40em;
+    margin: auto;
+}
+.paragraph--type--text .field--name-field-text {
+     margin: 0 0 10px;
+}
+.field--name-field-paragraph-elements {
+  .field--item {
+    .paragraph--type--card {
+      max-width: 45em;
+      margin: auto;
+    }
+    .display-mode-center {
+      .field--name-field-card-content {
+        max-width: 20em;
+        margin: auto;
+      }
+    }
+    .display-mode-right {
+      float: right;
+      width: 45%;
+      .field--name-field-card-content {
+        width: 100%;
+        max-width: 20em;
+        float: left;
+      }
+    }
+    .display-mode-left {
+      float: left;
+      width: 45%;
+      .field--name-field-card-content {
+        width: 100%;
+        max-width: 20em;
+        float: right;
+      }
+    }
+  }
+}
+
+
+
+
+.field--name-field-item .field--item .paragraph--type--media > .field--name-field-text p {
+  font-style: italic;
+  font-size: .8em;
+  line-height: .8em;
+  margin: .5em;
+}
+.field--name-field-paragraph-elements {
+  .field--item {
+    .paragraph--type--breakout {
+      padding: 3em 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: white;
+      &:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    }
+  }
+}
+
+.paragraph--view-mode--preview {
+    border-left: 5px solid #aaa;
+    clear: both;
+    padding-left: 5px;
+}
+ 
+.paragraph--type--card {
+  margin: auto;
+  max-width: 45em;
+}
+.paragraph--type--card .field--name-field-card-content {
+    border: 1px solid #888;
+    border-color: rgba(0,0,0,.5);
+    background: rgba(255,255,255,.9);
+    margin: .5em;
+    padding: .5em;
+    border-radius: 5px;
+    color: #333;
+}
+.display-mode-center .field--name-field-card-content {
+    max-width: 25em;
+}
+.paragraph--type--media {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.field--name-field-breakout-content .paragraph--type--media,
+.field--name-field-breakout-content .paragraph--type--text,
+.field--name-field-breakout-content .paragraph--type--heading {
+    //margin-left: auto;
+    //margin-right: auto;
+    //background: black;
+    //background: rgba(0,0,0,.8);
+}
+.field--name-field-breakout-content .paragraph--type--card .paragraph--type--media,
+.field--name-field-breakout-content .paragraph--type--card .paragraph--type--text,
+.field--name-field-breakout-content .paragraph--type--card .paragraph--type--heading {
+    //color: black;
+    //background: white;
+}
+.field--name-field-breakout-content .paragraph--type--media>*,
+.field--name-field-breakout-content .paragraph--type--text>*,
+.field--name-field-breakout-content .paragraph--type--heading>* {
+    //padding: .5em;
+}
+
+
+@media (min-width: 992px){
+  .paragraph--type--double {
+    padding: .5em;
+  }
+  .field--name-field-double-content-primary {
+    max-width: 30em;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .field--name-field-double-content-secondary {
+    max-width: 30em;
+    margin-leftt: 0;
+    margin-right: auto;
+  }
+}
