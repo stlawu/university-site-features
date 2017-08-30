@@ -1,0 +1,148 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set col1_attributes = create_attribute() %}
+{% set col2_attributes = create_attribute() %}
+{% set col3_attributes = create_attribute() %}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'clearfix',
+paragraph.field_row_margin_small.value == 2 ? 'col-sm-8',
+paragraph.field_row_margin_small.value == 2 ? 'col-sm-offset-2',
+paragraph.field_row_margin_small.value == 4 ? 'col-sm-4',
+paragraph.field_row_margin_small.value == 4 ? 'col-sm-offset-4',
+paragraph.field_row_margin_medium.value == 2 ? 'col-md-8',
+paragraph.field_row_margin_medium.value == 2 ? 'col-md-offset-2',
+paragraph.field_row_margin_medium.value == 4 ? 'col-md-4',
+paragraph.field_row_margin_medium.value == 4 ? 'col-md-offset-4',
+paragraph.field_row_margin_large.value == 2 ? 'col-lg-8',
+paragraph.field_row_margin_large.value == 2 ? 'col-lg-offset-2',
+paragraph.field_row_margin_large.value == 4 ? 'col-lg-4',
+paragraph.field_row_margin_large.value == 4 ? 'col-lg-offset-4',
+paragraph.field_row_margin_large.value == 4 ? 'col-lg-offset-4',
+paragraph.field_background_overlay.value == 'dark' ? 'background-overlay-style-dark',
+paragraph.field_background_overlay.value == 'darker' ? 'background-overlay-style-darker',
+paragraph.field_background_overlay.value == 'darkest' ? 'background-overlay-style-darkest',
+paragraph.field_background_overlay.value == 'light' ? 'background-overlay-style-light',
+paragraph.field_background_overlay.value == 'lighter' ? 'background-overlay-style-lighter',
+paragraph.field_background_overlay.value == 'lightest' ? 'background-overlay-style-lightest',
+]
+%}
+{%
+set col1classes = [
+paragraph.field_column_layout_small.value == 'col3-col6-col3' ? 'col-sm-3',
+paragraph.field_column_layout_small.value in ['col4-col4-col4','col4-col8','col4-col8-alt'] ? 'col-sm-4',
+paragraph.field_column_layout_small.value in ['col6-col6','col6-col6-alt'] ? 'col-sm-6',
+paragraph.field_column_layout_small.value in ['col8-col4','col8-col4-alt'] ? 'col-sm-8',
+paragraph.field_column_layout_small.value == 'col8-col4-alt' ? 'col-sm-push-4',
+paragraph.field_column_layout_small.value == 'col6-col6-alt' ? 'col-sm-push-6',
+paragraph.field_column_layout_small.value == 'col4-col8-alt' ? 'col-sm-push-8',
+paragraph.field_column_layout_small.value == 'col3-col6-col3' ? 'col-sm-3',
+paragraph.field_column_layout_small.value in ['col4-col4-col4','col4-col8','col4-col8-alt'] ? 'col-sm-4',
+paragraph.field_column_layout_medium.value in ['col6-col6','col6-col6-alt'] ? 'col-md-6',
+paragraph.field_column_layout_medium.value in ['col8-col4','col8-col4-alt'] ? 'col-md-8',
+paragraph.field_column_layout_medium.value == 'col8-col4-alt' ? 'col-md-push-4',
+paragraph.field_column_layout_medium.value == 'col6-col6-alt' ? 'col-md-push-6',
+paragraph.field_column_layout_medium.value == 'col4-col8-alt' ? 'col-md-push-8',
+paragraph.field_column_layout_medium.value == 'col3-col6-col3' ? 'col-md-3',
+paragraph.field_column_layout_large.value in ['col4-col4-col4','col4-col8','col4-col8-alt'] ? 'col-lg-4',
+paragraph.field_column_layout_large.value in ['col6-col6','col6-col6-alt'] ? 'col-lg-6',
+paragraph.field_column_layout_large.value in ['col8-col4','col8-col4-alt'] ? 'col-lg-8',
+paragraph.field_column_layout_large.value == 'col8-col4-alt' ? 'col-lg-push-4',
+paragraph.field_column_layout_large.value == 'col6-col6-alt' ? 'col-lg-push-6',
+paragraph.field_column_layout_large.value == 'col4-col8-alt' ? 'col-lg-push-8',
+]
+%}
+{%
+set col2classes = [
+paragraph.field_column_layout_small.value in ['col8-col4','col4-col4-col4','col8-col4-alt'] ? 'col-sm-4',
+paragraph.field_column_layout_small.value in ['col6-col6','col6-col6-alt','col3-col6-col3'] ? 'col-sm-6',
+paragraph.field_column_layout_small.value in ['col4-col8','col4-col8-alt'] ? 'col-sm-8',
+paragraph.field_column_layout_small.value == 'col4-col8-alt' ? 'col-sm-pull-4',
+paragraph.field_column_layout_small.value == 'col6-col6-alt' ? 'col-sm-pull-6',
+paragraph.field_column_layout_small.value == 'col8-col4-alt' ? 'col-sm-pull-8',
+paragraph.field_column_layout_medium.value in ['col8-col4','col4-col4-col4','col8-col4-alt'] ? 'col-lg-4',
+paragraph.field_column_layout_medium.value in ['col6-col6','col6-col6-alt','col3-col6-col3'] ? 'col-lg-6',
+paragraph.field_column_layout_medium.value in ['col4-col8','col4-col8-alt'] ? 'col-lg-8',
+paragraph.field_column_layout_medium.value == 'col4-col8-alt' ? 'col-lg-pull-4',
+paragraph.field_column_layout_medium.value == 'col6-col6-alt' ? 'col-lg-pull-6',
+paragraph.field_column_layout_medium.value == 'col8-col4-alt' ? 'col-lg-pull-8',
+paragraph.field_column_layout_large.value in ['col8-col4','col4-col4-col4','col8-col4-alt'] ? 'col-lg-4',
+paragraph.field_column_layout_large.value in ['col6-col6','col6-col6-alt','col3-col6-col3'] ? 'col-lg-6',
+paragraph.field_column_layout_large.value in ['col4-col8','col4-col8-alt'] ? 'col-lg-8',
+paragraph.field_column_layout_large.value == 'col4-col8-alt' ? 'col-lg-pull-4',
+paragraph.field_column_layout_large.value == 'col6-col6-alt' ? 'col-lg-pull-6',
+paragraph.field_column_layout_large.value == 'col8-col4-alt' ? 'col-lg-pull-8',
+]
+%}
+{%
+set col3classes = [
+paragraph.field_column_layout_small.value == 'col4-col4-col4' ? 'col-sm-4',
+paragraph.field_column_layout_small.value == 'col3-col6-col3' ? 'col-sm-3',
+paragraph.field_column_layout_medium.value == 'col4-col4-col4' ? 'col-md-4',
+paragraph.field_column_layout_medium.value == 'col3-col6-col3' ? 'col-md-3',
+paragraph.field_column_layout_large.value == 'col4-col4-col4' ? 'col-lg-4',
+paragraph.field_column_layout_large.value == 'col3-col6-col3' ? 'col-lg-3',
+paragraph.field_column_layout_small.value in ['col6-col6','col6-col6-alt','col8-col4','col8-col4-alt','col4-col8','col4-col8-alt'] ? 'col-sm-12',
+paragraph.field_column_layout_medium.value in ['col6-col6','col6-col6-alt','col8-col4','col8-col4-alt','col4-col8','col4-col8-alt'] ? 'col-md-12',
+paragraph.field_column_layout_large.value in ['col6-col6','col6-col6-alt','col8-col4','col8-col4-alt','col4-col8','col4-col8-alt'] ? 'col-lg-12',
+]
+%}
+
+{%
+  set background_color = paragraph.field_background_color.value.0.color ? paragraph.field_background_color.value.0.color : 'none'
+%}
+<div class="paragraph-type-row row" style="background-color:{{ background_color }};background-image: url({{ file_url(paragraph.field_background_media.entity.field_image.entity.uri.value) }})">
+  <div{{ attributes.addClass(classes) }}>
+    {% if paragraph.field_column_paragraph|length > 1 %}
+    <div class="row">
+      <div{{ col1_attributes.addClass(col1classes) }}>{{ content.field_column_paragraph.0 }}</div>
+      <div{{ col2_attributes.addClass(col2classes) }}>{{ content.field_column_paragraph.1 }}</div>
+      <div{{ col3_attributes.addClass(col3classes) }}>{{ content.field_column_paragraph.2 }}</div>
+    </div>
+    {% else %}
+    {{ content.field_column_paragraph.0 }}
+    {% endif %}
+    {{ content|without('field_column_paragraph') }}
+  </div>
+</div>
+
+

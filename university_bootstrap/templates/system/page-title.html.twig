@@ -16,35 +16,29 @@
  * @see template_preprocess_page_title()
  */
 #}
-{% if banner %}
-  {% if title %}
-    <div class="row banner banner-type-{{ banner.type }}" style="{{ banner.style }}">
-      <div class="container">
+{% if title %}
+  {% set title_content %}
+  <div class="page-header-wrapper row" style="{{ banner.style }}">
+    <div class="col-sm-12">
+      <div class="content-container">
         <h1{{ title_attributes.addClass('page-header') }}>{{ title }}</h1>
-        {% if banner.subtitle %}
-          <div class="subtitle">
-            {{ banner.subtitle|raw }}
-          </div>
-        {% endif %}
-        {% if banner.byline %}
-          <div class="byline">
-            {{ banner.byline|raw }}
-          </div>
-        {% endif %}
-      </div>
-      {% if banner.items %}
-        <div class="banner-background" style="background-color:{{ banner.background_color }}">
-          {% for item in banner.items %}
-            <div class="layer-{{ loop.index }}">
-              {{ item }}
+          {% if banner.subtitle %}
+            <div class="subtitle">
+              {{ banner.subtitle|raw }}
             </div>
-          {% endfor %}
-        </div>
-      {% endif %}
+          {% endif %}
+          {% if banner.byline %}
+            <div class="byline">
+              {{ banner.byline|raw }}
+            </div>
+          {% endif %}
+      </div>
     </div>
-  {% endif %}
-{% else %}
-  <div class="container">
-    <h1{{ title_attributes.addClass('page-header') }}>{{ title }}</h1>
   </div>
+  {% endset %}
+
+  {% block header %}
+    {{ title_content }}
+  {% endblock %}
+
 {% endif %}
