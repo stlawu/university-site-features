@@ -1,6 +1,91 @@
 /**
  * Place your custom styles here.
  */
+
+@import "default-variables";
+
+// Mixins
+@import "mixins/buttons";
+
+// Overrides
+@import "buttons";
+@import "fonts";
+@import "navbar";
+@import "typography";
+
+.bs-region.bs-region--left h1,
+.bs-region.bs-region--right h1 {
+  margin-top: 0;
+}
+
+.page-node-type-photograph .main-container .row > .col-sm-12,
+.page-node-type-legacy-photo-essay .main-container .row > .col-sm-12 {
+  @media (min-width: $screen-sm-min) {
+    max-width: 65em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+.page-node-type-legacy-photo-essay .main-container .row > .bs-region--bottom {
+  clear: both;
+}
+
+.header-row .content-container {
+  @media (min-width: $screen-sm-min) {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+.page-node-type-narrative .page-header-wrapper .content-container {
+  @media (min-width: $screen-sm-min) {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+.page-node-type-narrative .page-header-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.background-overlay-style-dark {
+    background: rgba(0,0,0,0.2);
+    color: white;
+}
+.background-overlay-style-darker {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+.background-overlay-style-darkest {
+    background: rgba(0,0,0,0.8);
+    color: white;
+}
+.background-overlay-style-light {
+    background: rgba(255,255,255,0.2);
+    color: black;
+}
+.background-overlay-style-lighter {
+    background: rgba(255,255,255,0.5);
+    color: black;
+}
+.background-overlay-style-lightest {
+    background: rgba(255,255,255,0.8);
+    color: black;
+}
+.paragraph-type-row {
+    padding: 2em 0;
+}
+
 .region-header {
   .banner-type-color{
     padding: 5em 0;

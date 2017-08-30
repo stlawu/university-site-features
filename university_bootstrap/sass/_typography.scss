@@ -1,0 +1,106 @@
+// Typography
+
+html {
+  font-size: $em-base;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  line-height: $base-line-height;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  max-width: 70rem;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.subtitle {
+  font-size: $lead-font-size;
+  font-family: $font-family-serif;
+  line-height: $lead-line-height;
+}
+
+// Heading mixins
+@mixin title {
+  font-size: $title-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h6 {
+  font-size: $h6-font-size;
+  font-weight: $font-weight-normal;
+  line-height: $base-line-height;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $font-family-serif;
+  line-height: $heading-line-height;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+}
+
+h6 {
+  font-family: $font-family-sans-serif;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+h4 {
+  @include h4();
+}
+
+h5 {
+  @include h5();
+}
+
+h6 {
+  @include h6();
+}
